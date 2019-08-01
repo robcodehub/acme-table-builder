@@ -6,6 +6,14 @@
 
   <style>
 
+    #usersTable {
+     border: solid 1px black;
+    }
+
+    tr, th, td {
+     border: solid 1px black;
+    }
+
   </style>
 
 </head>
@@ -37,7 +45,7 @@ render() {
 let html = "<tr>"
 html += this.colArr.map((col, idx)=>{
    return `
-    <th>${this.colArr[idx].title}<th>
+    <th>${this.colArr[idx].title}</th>
    `
   }).join('');
   html += "</tr>";
