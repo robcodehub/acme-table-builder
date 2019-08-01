@@ -41,6 +41,18 @@ html += this.colArr.map((col, idx)=>{
    `
   }).join('');
   html += "</tr>";
+
+ html += this.rowArr.map((row, idx) =>{
+   return `
+    <tr>
+      <td>${this.rowArr[idx].name}</td>
+      <td>${this.rowArr[idx].role}</td>
+      <td>${this.rowArr[idx].salary}</td>
+    </tr>
+    `
+  }).join('');
+
+
 /*
   let html = '<tr>';
   for(let i=0; i<this.colArr.length; i++ ){
