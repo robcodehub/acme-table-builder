@@ -34,15 +34,22 @@ class TableBuilder {
   }
 
 render() {
-  // const html = this.colArr.map((col, idx)=>{console.log(
-  //   `<tr>
-  //     <th>${this.colArr[idx].title}<th>
-  //   </tr>`
-  // )});
-  let html = '';
-  for(let i=0; i<4; i++ ){
-    html += `<tr>Hi</tr>`
+let html = "<tr>"
+html += this.colArr.map((col, idx)=>{
+   return `
+    <th>${this.colArr[idx].title}<th>
+   `
+  }).join('');
+  html += "</tr>";
+/*
+  let html = '<tr>';
+  for(let i=0; i<this.colArr.length; i++ ){
+    html += "<th>"
+    html += this.colArr[i].title
+    html += "</th>"
   }
+  html += "</tr>"
+*/
 
   document.querySelector(this.selector).innerHTML = html;
   console.log(html);
