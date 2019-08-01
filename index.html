@@ -12,9 +12,88 @@
 
 <body>
 
+  <h1> Acme Table Builder</h1>
 
+  <table id="usersTable">
+
+
+
+  </table>
 
   <script>
+
+class TableBuilder {
+  constructor(colArr, rowArr, selector) {
+    this.colArr = colArr;
+    this.rowArr = rowArr;
+    this.selector = selector;
+  }
+
+  init() {
+    document.querySelector(this.selector).addEventLister('click', (ev) => {
+
+    });
+
+  }
+
+render() {
+  const html = `<tr>`
+    html += this.colArr.map(col => {
+    `<th> ${this.colArr.title} </th>
+    </tr>`
+  });
+  document.querySelector(this.selector).innerHTML = html;
+
+  }
+
+}
+
+
+const usersTable = new TableBuilder(
+      [
+        {
+          title: 'Name',
+          key: 'name'
+        },
+        {
+          title: 'Position',
+          key: 'role'
+        },
+        {
+          title: 'Salary',
+          key: 'salary',
+          type: 'number'
+        }
+
+      ],
+      [
+        {
+          name: 'Moe',
+          role: 'CEO',
+          salary: 80000
+        },
+        {
+          name: 'Larry',
+          role: 'CTO',
+          salary: 70000
+        },
+        {
+          name: 'Curly',
+          role: 'CPO',
+          salary: 75000
+        },
+        {
+          name: 'Shep',
+          role: 'Security Officer',
+          salary: 1000000
+        }
+      ],
+      '#usersTable'//id of DOM element
+    );
+    usersTable.init();
+
+
+
 
   </script>
 
