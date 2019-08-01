@@ -30,18 +30,14 @@ class TableBuilder {
   }
 
   init() {
-    document.querySelector(this.selector).addEventLister('click', (ev) => {
-
-    });
-
+    this.render();
   }
 
 render() {
-  const html = `<tr>`
-    html += this.colArr.map(col => {
-    `<th> ${this.colArr.title} </th>
-    </tr>`
-  });
+  let html = `<tr> this.colArr.map(col => {
+    `<th> ${this.colArr.title} </th>`
+
+  })</tr>`;
   document.querySelector(this.selector).innerHTML = html;
 
   }
