@@ -34,14 +34,19 @@ class TableBuilder {
   }
 
 render() {
-  let html = `<tr> this.colArr.map(col => {
-    `<th> ${this.colArr.title} </th>`
-
-  })</tr>`;
-  document.querySelector(this.selector).innerHTML = html;
-
+  // const html = this.colArr.map((col, idx)=>{console.log(
+  //   `<tr>
+  //     <th>${this.colArr[idx].title}<th>
+  //   </tr>`
+  // )});
+  let html = '';
+  for(let i=0; i<4; i++ ){
+    html += `<tr>Hi</tr>`
   }
 
+  document.querySelector(this.selector).innerHTML = html;
+  console.log(html);
+  }
 }
 
 
