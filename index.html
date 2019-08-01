@@ -38,6 +38,14 @@ class TableBuilder {
   }
 
   init() {
+    document.querySelector(this.selector).addEventListener('click', (ev) => {
+        console.log(ev.target.parentNode.children);
+        
+
+    });
+
+
+
     this.render();
   }
 
